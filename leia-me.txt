@@ -1,0 +1,13 @@
+olhar no docker-compose.yml ->
+->criar volume externo p n ter risco de perder o banco de dados 
+qdo perder o container do docker:
+-docker volume create iniciando-nestjs-dbdata
+
+-rodar o comando 'docker-compose up' ou, caso precise buildar de 
+novo 'docker-compose up --build'
+--precisa fornecer permissao p exec:
+-'chmod +x .docker/entrypoint.sh'
+
+--se eu quiser acessar o banco de dados ou a aplicação, pelo nome do 
+serviço no docker-compose, executo o comando: 
+-'docker-compose exec db bash'
